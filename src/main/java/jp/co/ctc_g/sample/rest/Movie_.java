@@ -1,0 +1,16 @@
+package jp.co.ctc_g.sample.rest;
+
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+
+/**
+ * @author Arun Gupta
+ */
+@StaticMetamodel(Movie.class)
+public class Movie_ { 
+
+    public static volatile SingularAttribute<Movie, Integer> id;
+    public static volatile SingularAttribute<Movie, String> name;
+    public static volatile SingularAttribute<Movie, String> actors;
+
+}

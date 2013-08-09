@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN" "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+ 
+<resources>
+<jdbc-connection-pool
+ name="java:app/jdbc/oracle_test"
+ res-type="javax.sql.DataSource"
+ datasource-classname="oracle.jdbc.driver.OracleDriver"
+ pool-resize-quantity="1"
+ max-pool-size="5"
+ steady-pool-size="0"
+ statement-timeout-in-seconds="30" >
+   <property name="User" value="TEST"></property>
+   <property name="Password" value="TEST"></property>
+   <property name="portNumber" value="1521"></property>
+   <property name="dataBaseName" value="XE"></property>
+   <property name="serverName" value="127.0.0.1"></property>
+ </jdbc-connection-pool>
+ <jdbc-resource pool-name="java:app/jdbc/oracle_test" jndi-name="java:app/jdbc/oracle_test"></jdbc-resource>
+</resources>
